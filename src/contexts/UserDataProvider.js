@@ -48,6 +48,7 @@ export function UserProvider({ children }) {
               setCartLoading(false);
               toast.success(`${product.name} added to cart successfully!`);
               dispatch({ type: "SET_CART", payload: response.data.cart });
+              console.log({ type: "SET_CART", payload: response.data.cart });
             }
           } catch (error) {
             setCartLoading(false);

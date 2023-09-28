@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const addOrderService = async (order, token) => {
   return await axios.post(
-    "api/user/orders",
+    `${process.env.BASE_URL || ''}/api/user/orders`,
     { ...order },
     { headers: { authorization: token } }
   );
